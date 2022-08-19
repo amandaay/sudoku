@@ -40,6 +40,7 @@ public class sudokuController implements IController{
             try{
                 // making sure the input is a number and within 3 digits, so it doesn't come up as e.g. 9999
                 if (position.length() == 3) {
+                    // parsing the first three inputs
                   int number = Integer.parseInt(String.valueOf(position.charAt(0)));
                   int row = Integer.parseInt(String.valueOf(position.charAt(1)));
                   int col = Integer.parseInt(String.valueOf(position.charAt(2)));

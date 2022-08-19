@@ -19,8 +19,6 @@ public interface IModel {
      */
     void move(int number, int row, int col) throws IllegalStateException, IndexOutOfBoundsException;
 
-
-
     /**
      * checks if the number exist in the row
      * @param board current board
@@ -68,13 +66,6 @@ public interface IModel {
     boolean solveBoard(int[][] board);
 
     /**
-     * check if the board is completely full
-     * @param board current board
-     * @return true if the board is full
-     */
-//    boolean boardIsFull(int[][] board);
-
-    /**
      * Returns the Player whose mark is in the cell at the given coordinates
      * 0 if the cell is empty.
      *
@@ -106,5 +97,4 @@ public interface IModel {
      * @throws IllegalStateException if the game is not over
      */
     boolean result(int[][] currBoard) throws IllegalStateException;
-
 }

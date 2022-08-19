@@ -7,12 +7,14 @@ import java.io.PrintStream;
 
 import static org.junit.Assert.*;
 
-
-
+/**
+ * Mock model to test the controller with a different board
+ * duplicate functions are necessary as helper functions
+ *
+ */
 class MockModel implements IModel{
 
     private StringBuilder log;
-
     private int[][] board;
     private boolean moved;
 

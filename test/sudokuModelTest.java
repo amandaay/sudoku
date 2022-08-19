@@ -4,11 +4,12 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- * test for sudoku model
+ * unit test for sudoku model
  */
 public class sudokuModelTest {
 
     IModel game1, game2;
+    // valid board
     int [][] board = {
             {3, 0, 0, 7, 0, 1, 9, 2, 0},
             {7, 0, 6, 0, 0, 9, 8, 0, 0},
@@ -165,7 +166,6 @@ public class sudokuModelTest {
         assertFalse(game1.isValidPlacement(board, 3, 0, 1));
     }
 
-
     /**
      * checks if the player is able to solve the board
      */
@@ -274,11 +274,17 @@ public class sudokuModelTest {
         assertTrue(game1.isGameOver());
     }
 
+    /**
+     * test if get mark at gets the correct location
+     */
     @Test
     public void getMarkAtTest(){
         assertEquals(0, game1.getMarkAt(0, 8), 0.01);
     }
 
+    /**
+     * test the index out of bound for get mark at function in module
+     */
     @Test (expected = IndexOutOfBoundsException.class)
     public void getMarkAtFailed(){
         assertEquals(-1, game1.getMarkAt(-100, 200));
