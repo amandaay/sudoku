@@ -138,14 +138,28 @@ public class sudokuModel implements IModel{
                 !isNumberInBox(board, number, row, col);
     }
 
-    /**
-     * check if the player solved the board
-     *
-     * @param board the current board
-     * @return true if the player successfully solved the board
-     */
-    @Override
-    public boolean solveBoard(int[][] board) {
+  /**
+   * check if the player solved the board
+   *
+   * citation courtesy of:
+   * (adapted from various tutorials as the following)
+   * https://www.baeldung.com/java-sudoku
+   * https://www.geeksforgeeks.org/backtracking-algorithms/.
+   * https://leetcode.com/problems/sudoku-solver/solution/
+   * https://www.youtube.com/watch?v=tvP_FZ-D9Ng&t=23s
+   * https://www.youtube.com/watch?v=G_UYXzGuqvM
+   * https://www.youtube.com/watch?v=eAFcj_2quWI&t=254s
+   * https://www.youtube.com/watch?v=mcXc8Mva2bA&t=732s
+   * https://www.youtube.com/watch?v=eqUwSA0xI-s
+   * https://www.youtube.com/watch?v=lK4N8E6uNr4
+   * https://www.youtube.com/watch?v=JzONv5kaPJM
+   *
+   *
+   * @param board the current board
+   * @return true if the player successfully solved the board
+   */
+  @Override
+  public boolean solveBoard(int[][] board) {
         for (int row = 0; row < 9; row++){
             for (int col = 0; col < 9; col++){
                 if (board[row][col] == 0){
