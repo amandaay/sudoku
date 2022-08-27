@@ -1,3 +1,3 @@
 # sudoku
 
-A default sudoku player using the MVC model with the backtracking algorithm.
+A test-driven sudoku game using the MVC design paradigm with the backtracking algorithm.
